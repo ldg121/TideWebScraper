@@ -12,14 +12,14 @@ namespace TideWebScraper
     {
         static void Main(string[] args)
         {
-            GetTides();
+            GetTides("9418723");
             Console.ReadLine();
         }
 
-        private static async void GetTides()
+        private static async void GetTides(string region_code)
         {
             //we need a url to grab tide info for
-            var url = "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9418723";
+            var url = "https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id="+ region_code;
             var httpClient = new HttpClient();
             var html = await httpClient.GetStringAsync(url);
             //creates new html document
@@ -42,27 +42,57 @@ namespace TideWebScraper
 
             int high_tide = 0;
             int low_tide = 0;
-
+            string[] data = new string[8];
+            int counter = 0;
             foreach (var tide in tides)
             {
                 var info = "";
                 info = tide.InnerText;
                 Console.WriteLine(info);
+                string time = "";
+                string height = "";
+                //the next for loop is so that we can add every item we need an array
+                foreach (var chara in info) 
+                {
+                    string temp = "";
+                    if (chara != 'M')
+                    {
+                        //add to string time
+                        temp = chara.ToString();
+                        time = time + temp;
+                    }
+                    else if (chara == 'M')
+                    {
+                        //add 'm' to string time and string add to array 
+                        temp = chara.ToString();
+                        time = time + temp;
+                        data[counter] = time;
+                        counter++;
+                    }
+                    else if (chara == '-' /*|| Char.IsDigit(chara) == true ||
+                             chara == 'f' || chara == 't'*/)
+                    {
+                        //add to string height
+                        temp = chara.ToString();
+                        height = height + temp;
+                    }
+                    else if (chara == '.')
+                    {
+                        //add to string height and array
+                        temp = chara.ToString();
+                        height = height + temp;
+                        data[counter] = time;
+                        counter++;
+                        break;
+                    }
+                    else
+                    {
+                        //in between data
+                        Console.WriteLine("I am in between the two data sets");
 
-                if (info[7] == 'l')
-                {
-                    Console.WriteLine("this is a low tide");
-                    Console.WriteLine(low_tide);
-                    low_tide++;
+                    }
                 }
-                    
-                else
-                {
-                    Console.WriteLine("this is a high tide");
-                    Console.WriteLine(high_tide);
-                    high_tide++;
-                }
-                    
+
             }
 
                 Console.WriteLine();
