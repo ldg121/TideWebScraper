@@ -36,19 +36,38 @@ namespace TideWebScraper
                 .Where(node => node.GetAttributeValue("class", "")
                 .Equals("table table-condensed")).ToList();
 
-            var tides_single = tides_table[0].Descendants("tr")
+            var tides = tides_table[0].Descendants("tr")
                 .Where(node => node.GetAttributeValue("class","")
                 .Equals("")).ToList();
 
-            foreach (var tide in tides_single)
-            {
-                Console.WriteLine(tide.Descendants("tr")
-                    .Where(node => node.GetAttributeValue("", "")
-                    .Equals("")).FirstOrDefault().InnerText
-                );
+            int high_tide = 0;
+            int low_tide = 0;
 
+            foreach (var tide in tides)
+            {
+                var info = "";
+                info = tide.InnerText;
+                Console.WriteLine(info);
+
+                if (info[7] == 'l')
+                {
+                    Console.WriteLine("this is a low tide");
+                    Console.WriteLine(low_tide);
+                    low_tide++;
+                }
+                    
+                else
+                {
+                    Console.WriteLine("this is a high tide");
+                    Console.WriteLine(high_tide);
+                    high_tide++;
+                }
+                    
             }
-            Console.WriteLine();
+
+                Console.WriteLine();
+            
+            
         }
     }
 }

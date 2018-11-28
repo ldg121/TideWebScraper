@@ -20,3 +20,14 @@ C:\Users\Lord Vagram\Desktop\WebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\T
 C:\Users\Lord Vagram\Desktop\WebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.AssemblyInfo.cs
 C:\Users\Lord Vagram\Desktop\WebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.dll
 C:\Users\Lord Vagram\Desktop\WebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.pdb
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\bin\Debug\netcoreapp2.0\TideWebScraper.deps.json
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\bin\Debug\netcoreapp2.0\TideWebScraper.runtimeconfig.json
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\bin\Debug\netcoreapp2.0\TideWebScraper.runtimeconfig.dev.json
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\bin\Debug\netcoreapp2.0\TideWebScraper.dll
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\bin\Debug\netcoreapp2.0\TideWebScraper.pdb
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.csprojResolveAssemblyReference.cache
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.csproj.CoreCompileInputs.cache
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.AssemblyInfoInputs.cache
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.AssemblyInfo.cs
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.dll
+C:\Users\babyc\Desktop\TideWebScraper\TideWebScraper\obj\Debug\netcoreapp2.0\TideWebScraper.pdb

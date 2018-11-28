@@ -3893,7 +3893,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lord Vagram\\.nuget\\packages\\": {},
+    "C:\\Users\\babyc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -3903,18 +3903,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lord Vagram\\Desktop\\WebScraper\\TideWebScraper\\TideWebScraper.csproj",
+      "projectUniqueName": "C:\\Users\\babyc\\Desktop\\TideWebScraper\\TideWebScraper\\TideWebScraper.csproj",
       "projectName": "TideWebScraper",
-      "projectPath": "C:\\Users\\Lord Vagram\\Desktop\\WebScraper\\TideWebScraper\\TideWebScraper.csproj",
-      "packagesPath": "C:\\Users\\Lord Vagram\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lord Vagram\\Desktop\\WebScraper\\TideWebScraper\\obj\\",
+      "projectPath": "C:\\Users\\babyc\\Desktop\\TideWebScraper\\TideWebScraper\\TideWebScraper.csproj",
+      "packagesPath": "C:\\Users\\babyc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\babyc\\Desktop\\TideWebScraper\\TideWebScraper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lord Vagram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\babyc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
