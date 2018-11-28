@@ -40,8 +40,7 @@ namespace TideWebScraper
                 .Where(node => node.GetAttributeValue("class","")
                 .Equals("")).ToList();
 
-            int high_tide = 0;
-            int low_tide = 0;
+
             string[] data = new string[8];
             int counter = 0;
             foreach (var tide in tides)
@@ -51,39 +50,55 @@ namespace TideWebScraper
                 Console.WriteLine(info);
                 string time = "";
                 string height = "";
+                int place_holder = 0;
+                int decimal_counter = 0;
                 //the next for loop is so that we can add every item we need an array
-                foreach (var chara in info) 
+                for (int i = 0; i < info.Length; i++)
                 {
                     string temp = "";
-                    if (chara != 'M')
+                    if (info[i] != 'M')
                     {
                         //add to string time
-                        temp = chara.ToString();
+                        temp = info[i].ToString();
                         time = time + temp;
                     }
-                    else if (chara == 'M')
+                    else if (info[i] == 'M')
                     {
                         //add 'm' to string time and string add to array 
-                        temp = chara.ToString();
+                        temp = info[i].ToString();
                         time = time + temp;
                         data[counter] = time;
                         counter++;
+                        place_holder = i;
                     }
-                    else if (chara == '-' /*|| Char.IsDigit(chara) == true ||
-                             chara == 'f' || chara == 't'*/)
+                }
+
+                for (int j = place_holder; j < info.Length; j++)
+                {
+                    string temp2 = "";
+                    if (info[j] == '-' || Char.IsDigit(info[j]) == true ||
+                             info[j] == 'f' || info[j] == 't')
                     {
                         //add to string height
-                        temp = chara.ToString();
-                        height = height + temp;
+                        temp2 = info[j].ToString();
+                        height = height + temp2;
+                        Console.WriteLine(info[j]);
+
                     }
-                    else if (chara == '.')
+                    else if (info[j] == '.' && decimal_counter == 0)
+                    {
+                        temp2 = info[j].ToString();
+                        height = height + temp2;
+                        decimal_counter++;
+                    }
+                    else if (info[j] == '.' && decimal_counter == 1)
                     {
                         //add to string height and array
-                        temp = chara.ToString();
-                        height = height + temp;
-                        data[counter] = time;
+                        temp2 = info[j].ToString();
+                        height = height + temp2;
+                        data[counter] = height;
                         counter++;
-                        break;
+
                     }
                     else
                     {
@@ -92,11 +107,10 @@ namespace TideWebScraper
 
                     }
                 }
-
             }
 
                 Console.WriteLine();
-            
+            //return data;
             
         }
     }
